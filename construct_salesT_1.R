@@ -13,3 +13,7 @@ month_table <-
 prod_table <- 
   data.frame(key=c("Printer", "Tablet", "Laptop"),
             price=c(225, 570, 1120))
+
+#What would be the improvement you get by populating prod table this way:
+prod_table <-data.frame("key"=factor(x=key,levels=c("Printer","Tablet","Laptop"),ordered=TRUE),
+             price =c(225, 570, 1120))
