@@ -24,3 +24,6 @@ rules <- apriori(Groceries, parameter = list(supp = 0.0001, conf = 0.5))
 # This gives 982,000 rules.
 rules_chi2 <- apriori(Groceries, parameter = list(supp = 0.0001, conf = 0.5, arem = "chi2"))
 
+#rules that have only itemA, only itemB, or only both of them at the left hand side
+rules2 <- apriori(Groceries, parameter = list(support = 0.01, confidence = 0.01,
+      minlen =2),appearance = list(lhs=c("white bread","chocolate"),default="rhs"))
