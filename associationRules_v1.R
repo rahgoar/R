@@ -15,7 +15,9 @@ wholemilk_rules <- apriori(data=Groceries, parameter=list (supp=0.001,conf = 0.0
 # This generates only one rule in the output.
 grocery_rules_increased_support <- apriori(Groceries, parameter = list(support = 0.02, confidence = 0.5))
 
-
+#When you browse through your rules data, you will notice that there are many overlaps, 
+#Some are inclusive of the other rules. You would want to keep the longer rules and discard the ones that are the same but are subsets of the longer ones. 
+#The function subset compares the data with itself and using "which", we keep the ones that are redundant and then remove them from the grocery_rules.
 subsets <- which(colSums(is.subset(grocery_rules, grocery_rules)) > 1)
 grocery_rules <- grocery_rules[-subsets]
 
