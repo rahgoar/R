@@ -34,6 +34,8 @@ print(tab)
 accuracy <- function(x){sum(diag(x)/(sum(rowSums(x)))) * 100}
 
 accuracy(tab)
+
+plot(pr)
 ##--------------------------------
 library(caret)
 result <- confusionMatrix(predicted, realized, mode="prec_recall")
