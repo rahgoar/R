@@ -7,3 +7,5 @@ plot(wholemilk_rules, method = NULL, measure = "support", shading = NA,
 
 
 plot(wholemilk_rules, method = "graph", control = list(verbose = TRUE))
+
+plot(rules2, method = "graph", control = list(verbose = TRUE))
