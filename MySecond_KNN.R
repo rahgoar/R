@@ -38,3 +38,5 @@ tb <- table(pr,test_target)
 ##check the accuracy
 accuracy <- function(x){sum(diag(x)/(sum(rowSums(x)))) * 100}
 accuracy(tb)
+
+plot(pr)
