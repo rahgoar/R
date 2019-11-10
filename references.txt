@@ -1,0 +1,3 @@
+https://towardsdatascience.com/clustering-analysis-in-r-using-k-means-73eca4fb7967
+
+https://towardsdatascience.com/hierarchical-clustering-on-categorical-data-in-r-a27e578f2995
